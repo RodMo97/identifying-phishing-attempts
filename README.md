@@ -1,33 +1,19 @@
 # identifying-phishing
 
 
-Guide on how to spot phishing attempts how to determine if they are malicious
  
 ![scam-3933004_1280](https://github.com/RodMo97/identifying-phishing/assets/124803297/c892503b-4d93-4850-aef8-77135ee4f248)
 
 
 
+# Identify important information 
+
+
+<img width="713" alt="Drawing-1 sketchpad" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/e5f135aa-15cc-402a-b083-d87091cb1145">
 
 
 
 
-
-gfdgfgfdgfdgfdg
-
-
-<img width="713" alt="Drawing-1 sketchpad" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/305b4fc5-6b90-43f6-a1bc-214ccea03fde">
-
-
-
-
-
-
-
-
-
-
-
-gfgfdgfdgfdgfdgdfg
 
 
 
