@@ -5,8 +5,8 @@
 * [Overview](#overview)
 * [Artifact Collection](#artifact-collection)
 * [Message Source](#message-source)
-* [Reverse Lookup](#reverse-lookup)
-* [Run Snort](#run-snort)
+* [Reverse IP Lookup](#reverse-ip-lookup)
+* [Domain Reputation Lookup](#domain-reputation-lookup)
 * [Documentation](#documentation)
 * [Squeal](#squeal)
 
@@ -42,31 +42,54 @@ When conducting an investigation for artifacts, there are two important areas of
 
 # Message Source
 
-Unless an SMTP analysis tool is used, it is not always as straightfoward to find the Sender IP and/or reply-to as it is the other information mentioned, By reviewing the source of the message, it gives a more detailed look into an email.
+Unless an SMTP header analysis tool is used, it is not always as straightfoward to find the Sender IP and/or reply-to as it is the other information mentioned, By reviewing the source of the message, it gives a more detailed look into an email.
 
 Most of the information needed is provided in the screenshot, but for learning purposes, I will only use the Sender's IP address (209.85.222.195) to find the other pertinent information.
 
 ### Source Example
 <img width="823" alt="Screenshot 2023-11-07 at 7 37 03ΓÇ»PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/5b60af3c-f679-4bf8-b77a-d846f093159b">
 
-# Reverse Lookup
+# Reverse IP Lookup
 
 The sender's IP from the message source can be used to locate the domain name. The tool used in the example is: https://mxtoolbox.com/SuperTool.aspx
 
+### MXtoolbox Example
 <img width="1512" alt="Screenshot 2023-11-07 at 7 40 44 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/6e56a669-ecef-47f3-be3f-736fd7beb017">
 
-### Other reverse lookup tools
+### Reverse Lookup Tools
 
        - https://viewdns.info/
        - https://hackertarget.com/reverse-dns-lookup/
        - https://reverseip.domaintools.com/
 
-After using reverse lookup to trace the IP to a domain name, using a 
+# Domain Reputation Lookup
 
+After using reverse lookup to trace the IP to the domain name, it a good idea to find out if it has a malicious reputation or not.
 
+Let's use a reputation tool: https://talosintelligence.com/reputation_center/lookup?search=mail-qk1-f195.google.com#ip-addresses
+
+### Talos Example
+<img width="737" alt="Screenshot 2023-11-09 at 3 47 09 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/a62e11b3-3aba-45a6-ab35-745d8c3d06f1">
+
+### Reputation Lookup Tools
+
+      -https://urlscan.io/
+      -https://easydmarc.com/tools/ip-domain-reputation-check
+      -https://www.ipvoid.com/domain-reputation-check/
+      
+# URL Extractor
+
+Now that artifact information has been collected from the email header, it is time to find artifacts located in the email body. The message source holds all information pertaining to an email, including URLs.
+
+A SMTP header analysis tool can be used to locate URLs as well, but we will use an URL ectrator to obtain information instead. After copying and paste the message source into the extractor, here are the URLs found using: https://www.convertcsv.com/url-extractor.htm
+
+### Convertcsv
 <img width="1512" alt="Screenshot 2023-11-07 at 7 42 48 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/6c4066a3-0070-4baf-8fc4-0c79127d0627">
 
+### URL Extractor tools
 
+      - https://gchq.github.io/CyberChef/
+      - https://miniwebtool.com/url-extractor/
 
 <img width="1331" alt="Screenshot 2023-11-07 at 5 02 53 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/1b29c370-fe28-4930-8cfb-ea104767bb6f">
 
