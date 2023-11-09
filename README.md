@@ -1,15 +1,45 @@
-# identifying-phishing
+# identifying-phishing-emails
 
-
- 
 ![scam-3933004_1280](https://github.com/RodMo97/identifying-phishing/assets/124803297/c892503b-4d93-4850-aef8-77135ee4f248)
 
+* [Overview](#overview)
+* [Artifact Collection](#artifact-collection)
+* [Message Source](#message-source)
+* [Reverse Lookup tools](#reverse-lookup-tools)
+* [Run Snort](#run-snort)
+* [Documentation](#documentation)
+* [Squeal](#squeal)
 
+# Overview 
 
-# Identify important information 
+Phishing is a social enginnering attack used to divulge sensitive information or trick victims into downloading/installing malicious malware. There are different forms of phishing which include email, voice, and text message.
 
+For this topic, we will cover over how to spot phishing emails and the some of the many tools used in investigations. The email service being used is Outlook.
+
+# Artifact Collection
+
+Artifacts are pieces of information/footprints, such as text or a reference to a resource that is used to create concreate evidence for an incident. 
+
+When conducting an investigation for artifacts, there are two important areas of interest to review, the email header and email body.
+
+* Email Header
+
+      - Subject line
+      - Time/Date
+      - Sender and recipient email address
+      - Sender IP address
+      - Reverse lookup of sender IP
+      - Reply-to email address
+
+* Email body
+
+      - Attachments
+      - Hash values
+      - URL links
+                
 
 <img width="713" alt="Drawing-1 sketchpad" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/e5f135aa-15cc-402a-b083-d87091cb1145">
+
 
 
 
