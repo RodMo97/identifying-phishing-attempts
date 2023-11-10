@@ -1,6 +1,6 @@
 # identifying-phishing-emails
 
-![scam-3933004_1280](https://github.com/RodMo97/identifying-phishing/assets/124803297/c892503b-4d93-4850-aef8-77135ee4f248)
+<img width="713" alt="Drawing-1 sketchpad" src="https://github.com/RodMo97/identifying-phishing-attempts/assets/124803297/a1130849-7d75-4d45-abab-4c1de028ae8e">
 
 * [Overview](#overview)
 * [Artifact Collection](#artifact-collection)
