@@ -8,7 +8,10 @@
 * [Reverse IP Lookup](#reverse-ip-lookup)
 * [Domain Reputation Lookup](#domain-reputation-lookup)
 * [URL Extractor](#url-extractor)
-* [Squeal](#squeal)
+* [Code Inspection](#code-inspection)
+* [Malware Scanning](#malware-scanning)
+* [Hash Value Check](#hash-value-check)
+* [Conclusion](#conclusion)
 
 # Overview 
 
@@ -93,10 +96,11 @@ A SMTP header analysis tool can be used to locate URLs as well, but we will use 
 
 # Code Inspection
 
-The URL button is another artificate that was highlighted at the beginning of collection process. The sender is masquerading as the IRS and is actively trying to get the recipient of the email to fill out the attached PDF and submitting information to the 
-URL that the "Submit Now" button is attached to.
+The URL button is another artificate that was highlighted at the beginning of collection process. 
 
-How do I know that the URL will direct to an URL not owned by the IRS? Firstly, the IRS will never ask for sensitive information over email and secondly, checking the developer code will tell you want URL the "Submit Now" button is associated with.
+The sender is masquerading as the IRS and is actively trying to get the recipient of the email to fill out the attached document and submitting information to the URL that the "Submit Now" button is attached to.
+
+How do I know that the link will direct to an URL not owned by the IRS? Firstly, the IRS will never ask for sensitive information over email and and secondly, checking the developer code will tell you what URL the "Submit Now" button is associated with.
 
 ### Developer Code Example
 <img width="1331" alt="Screenshot 2023-11-07 at 5 02 53 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/1b29c370-fe28-4930-8cfb-ea104767bb6f">
@@ -112,8 +116,27 @@ Now that we have the link, let's run it through a malware scanner to see if it i
 
 VirusTotal has flagged the link as malicious and it should be avoided at all cost or blacklisted along with any other associated emails, IP's and domains.
 
+### Malware Analysis Tools
 
+      - https://app.any.run/
+      - https://www.hybrid-analysis.com/
+      - https://www.joesecurity.org/
+
+# Hash Value Check
+
+The attached document could also be malicious. Obtaining the hash of the file could reveal if there are any CVEs (Common Vulnerabilities and Exposures).
+
+In the example, I downloaded to my desktop, ran terminal, accessed the path and typed the following command to reveal the hash of the file.
+
+### Terminal
 <img width="769" alt="Screenshot 2023-11-07 at 7 26 29 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/80e34e8b-7224-4a4b-9455-4a78d824f231">
 
+### CVE Check
+
+Followed by that, I ran the hash in VirusTotal to see if it comes back as malicious with any CVEs
 
 <img width="1512" alt="Screenshot 2023-11-07 at 7 59 15 PM" src="https://github.com/RodMo97/identifying-phishing/assets/124803297/4f6cbd90-d717-40ce-a9c4-60405ac14d8b">
+
+# Conclusion
+
+The investigation revealed that the phishing attempt is categorized malicious.  The sender is masquarding as the IRS to collecting sensitive information by instilling fear and urgency into recipients of the email.
